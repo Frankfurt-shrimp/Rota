@@ -1,0 +1,61 @@
+name: 回報問題 ｜ Bug report
+description: Rota 出了問題，或結果跟預期不同 ｜ Something in Rota is broken or behaves unexpectedly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝回報！**請勿貼上 API key、token、Email 或其他私密資訊。**
+        Thanks for reporting! **Never paste API keys, tokens, email addresses or other secrets.**
+  - type: textarea
+    id: what
+    attributes:
+      label: 發生了什麼事 ｜ What happened
+      description: 你做了什麼、預期看到什麼、實際看到什麼 ｜ What you did, what you expected, what you saw
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟 ｜ Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: input
+    id: rota
+    attributes:
+      label: Rota 版本 ｜ Rota version
+      description: 「Rota → 關於 Rota」｜ Rota → About Rota
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 版本 ｜ macOS version
+      placeholder: macOS 15.5
+    validations:
+      required: true
+  - type: input
+    id: cli
+    attributes:
+      label: AI CLI 版本 ｜ AI CLI versions
+      description: "`claude --version`、`codex --version`（沒裝就留空）｜ leave blank if not installed"
+  - type: dropdown
+    id: area
+    attributes:
+      label: 哪個部分 ｜ Area
+      options:
+        - 看板與卡片 ｜ Board and cards
+        - 連結卡片 ｜ Linking cards
+        - Agent 整合與 hook ｜ Agent integrations and hooks
+        - 終端機 ｜ Terminal
+        - 執行 App（iOS／Android）｜ Running apps (iOS / Android)
+        - 光暈與通知 ｜ Glow and notifications
+        - 其他 ｜ Other
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截圖 ｜ Screenshots
+      description: 可以直接拖曳圖片進來 ｜ Drag images here

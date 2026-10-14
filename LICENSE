@@ -1,0 +1,23 @@
+Rota — 免費使用授權 ｜ Freeware Licence
+
+Copyright (c) 2026 Yung Fu Lin. 保留所有權利。All rights reserved.
+
+【中文】
+
+1. 你可以免費下載、安裝並使用 Rota，個人與商業用途皆可。
+2. 你可以轉發本 repo 的連結。請不要重新包裝、修改、反組譯，或以其他名義散布 Rota 的安裝檔。
+3. Rota 依「現狀」提供，不附任何明示或默示的保證。因使用 Rota 而產生的任何損失，作者概不負責。使用前請自行備份重要資料。
+4. Rota 會修改 Claude Code 與 Codex 的設定檔（見 docs/privacy.md）。修改前會備份，並可在 App 內解除安裝。
+5. Rota 是獨立作品，與 OpenAI、Anthropic 沒有任何關係。Claude、Claude Code 是 Anthropic 的商標；Codex 是 OpenAI 的商標。
+6. Rota 內含第三方元件，各自依其授權條款提供：
+   - SwiftTerm（MIT License）：Copyright (c) 2019-2022 Miguel de Icaza；Copyright (c) 2017-2019 The xterm.js authors；Copyright (c) 2014-2016 SourceLair Private Company；Copyright (c) 2012-2013 Christopher Jeffrey。完整授權條款見 licenses/SwiftTerm-LICENSE.txt。
+
+【English】
+
+1. You may download, install and use Rota free of charge, for personal or commercial use.
+2. You may share links to this repository. Do not repackage, modify, decompile, or redistribute Rota's installer under another name.
+3. Rota is provided "as is", without warranty of any kind, express or implied. The author is not liable for any loss arising from its use. Back up important data before using it.
+4. Rota modifies Claude Code's and Codex's settings files (see docs/privacy.en.md). It backs them up first and can be uninstalled from within the app.
+5. Rota is an independent project and is not affiliated with OpenAI or Anthropic. Claude and Claude Code are trademarks of Anthropic. Codex is a trademark of OpenAI.
+6. Rota includes third-party components, each provided under its own licence:
+   - SwiftTerm (MIT License): Copyright (c) 2019-2022 Miguel de Icaza; Copyright (c) 2017-2019 The xterm.js authors; Copyright (c) 2014-2016 SourceLair Private Company; Copyright (c) 2012-2013 Christopher Jeffrey. Full text in licenses/SwiftTerm-LICENSE.txt.
