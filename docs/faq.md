@@ -11,12 +11,6 @@
 </details>
 
 <details>
-<summary>Rota 顯示「找到舊版 Roundelay」</summary>
-
-Rota 以前叫 Roundelay。兩者會共用同一份資料，同時保留可能會開錯 App。請按「在 Finder 顯示」，把舊的 `Roundelay.app` 移到垃圾桶。你的資料不會受影響。
-</details>
-
-<details>
 <summary>更新後出現「整合需要更新」</summary>
 
 新版本的 Rota 可能帶有新的 hook 或新的背景小工具。按「更新…」，確認清單後按「全部更新」即可。每個檔案都會先備份。更新 Codex 後，可能需要在 Codex 裡執行一次 `/hooks` 核准。

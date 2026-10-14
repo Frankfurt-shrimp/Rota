@@ -193,3 +193,5 @@ App 要求的最低 iOS 版本比手機的版本新。選單上會寫「需要 i
 - [更新紀錄](CHANGELOG.md)
 - [授權條款](LICENSE)：可以免費下載使用，不開放原始碼。
 - Rota 是獨立開發的作品，與 OpenAI、Anthropic 沒有任何關係。Claude、Claude Code 是 Anthropic 的商標；Codex 是 OpenAI 的商標。
+
+© 2026 Yung Fu Lin. 保留所有權利。

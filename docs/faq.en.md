@@ -11,12 +11,6 @@ Make sure you downloaded the `.dmg` from the [Releases](../../../releases/latest
 </details>
 
 <details>
-<summary>Rota says it found an old copy of Roundelay</summary>
-
-Rota used to be called Roundelay. Both share the same data, and keeping both can open the wrong app. Press **Show in Finder** and move the old `Roundelay.app` to the Trash. Your data is not affected.
-</details>
-
-<details>
 <summary>"The integration needs an update" appears after updating</summary>
 
 A new Rota may bring new hooks or a new helper. Press **Update…**, review the list, then press **Update All**. Each file is backed up first. After Codex is updated, you may need to approve once with `/hooks` inside Codex.

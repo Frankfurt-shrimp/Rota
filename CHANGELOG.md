@@ -13,7 +13,6 @@ Each release lists Chinese first, then English. Versions follow `major.minor.pat
 - **背景工作判斷**：只是在等外部事件的「監看」不會讓卡片卡在「等待背景工作」。
 - **整合一鍵更新**：新版本帶來新的 hook 時，主視窗會提示，一次就能全部更新，並自動備份。
 - **執行 App**：從工具列把 Xcode 或 Android App 執行到模擬器或實機，包含 iPhone 無線，以及 Android 透過手機熱點不接線執行。
-- **改名**：App 從 Roundelay 改名為 Rota。資料與設定會沿用。
 
 **English**
 
@@ -23,4 +22,3 @@ Each release lists Chinese first, then English. Versions follow `major.minor.pat
 - **Background work**: a *monitor* that only waits for an outside event no longer leaves a card waiting for background work.
 - **One-step integration updates**: when a new version brings new hooks, the main window says so and updates everything at once, with backups.
 - **Run apps**: run Xcode or Android apps from the toolbar on simulators and devices, including wireless iPhone runs and cable-free Android runs over the phone's hotspot.
-- **New name**: the app was renamed from Roundelay to Rota. Your data and settings are kept.

@@ -193,3 +193,5 @@ Open an [issue](../../issues/new/choose) with the bug report form. Include your 
 - [Changelog](CHANGELOG.md)
 - [Licence](LICENSE): free to download and use; the source code is not published.
 - Rota is an independent project and is not affiliated with OpenAI or Anthropic. Claude and Claude Code are trademarks of Anthropic. Codex is a trademark of OpenAI.
+
+© 2026 Yung Fu Lin. All rights reserved.
