@@ -19,7 +19,9 @@
   <img alt="Notarized by Apple" src="https://img.shields.io/badge/Apple-notarized-success">
 </p>
 
-https://github.com/user-attachments/assets/c74c1d65-b144-4244-99b2-777bca691841
+<p align="center">
+  <img src="assets/hero.en.gif" width="820" alt="Two Rota terminals side by side: Codex on the left linked as Spec, Claude Code on the right linked as Build; Codex writes the spec, Claude Code builds it, the card moves to You on its own and the screen edge glows">
+</p>
 
 <p align="center">
   <a href="../../releases/latest"><b>Download Rota (.dmg)</b></a>

@@ -19,7 +19,9 @@
   <img alt="已經過 Apple 公證" src="https://img.shields.io/badge/Apple-%E5%B7%B2%E5%85%AC%E8%AD%89-success">
 </p>
 
-https://github.com/user-attachments/assets/d090cd56-3d2e-4f7d-860f-b366d5676d68
+<p align="center">
+  <img src="assets/hero.gif" width="820" alt="左右兩個 Rota 終端機：左邊開 Codex 連結為「規格」、右邊開 Claude Code 連結為「實作」；Codex 寫好規格後，Claude Code 照規格實作，卡片自動移到「我」，螢幕邊緣亮起光暈">
+</p>
 
 <p align="center">
   <a href="../../releases/latest"><b>下載 Rota（.dmg）</b></a>
