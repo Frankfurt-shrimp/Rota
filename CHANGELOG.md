@@ -7,7 +7,7 @@ Each release lists Chinese first, then English. Versions follow `major.minor.pat
 
 **中文**
 
-- **看板接力**：「規格／實作／我」三條河道。Claude Code 與 Codex 都可以接任何一棒。
+- **看板協作**：「規格／實作／我」三條河道。Claude Code 與 Codex 都可以負責任何一段。
 - **連結卡片**：在 Rota 終端機啟動 `claude` 或 `codex` 時，提議連結到卡片，並詢問是規格還是實作。
 - **自動移動與完成**：卡片跟著 AI 的進度移動；做完時螢幕邊緣會亮起光暈，顏色代表完成者的角色。可以設定只對已連結的 Session 顯示。
 - **背景工作判斷**：只是在等外部事件的「監看」不會讓卡片卡在「等待背景工作」。
@@ -16,7 +16,7 @@ Each release lists Chinese first, then English. Versions follow `major.minor.pat
 
 **English**
 
-- **Relay board**: three lanes, Spec, Build and You. Claude Code and Codex can each take any turn.
+- **Shared board**: three lanes, Spec, Build and You. Claude Code and Codex can each take either part.
 - **Link cards**: start `claude` or `codex` in a Rota terminal and Rota offers to link it to a card, asking whether it is the Spec or the Build.
 - **Moves and completion**: cards follow the AI's progress. When a turn finishes, the screen edge glows in the colour of the finishing Session's role. You can limit the glow to linked Sessions.
 - **Background work**: a *monitor* that only waits for an outside event no longer leaves a card waiting for background work.

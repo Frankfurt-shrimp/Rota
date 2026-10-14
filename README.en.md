@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>A multi-agent board built around Spec-Driven Development (SDD)</b><br>
-  Claude Code and Codex take turns through spec, build and review. Who is working on what, how far it has got, and whose turn is next, all on one screen.
+  Claude Code and Codex work together through spec, build and review. Who is working on what, how far it has got, and who goes next, all on one screen.
 </p>
 
 <p align="center">
@@ -19,9 +19,7 @@
   <img alt="Notarized by Apple" src="https://img.shields.io/badge/Apple-notarized-success">
 </p>
 
-<p align="center">
-  <img src="assets/hero.en.gif" width="820" alt="Start Claude Code in a Rota terminal and link it to a card as Build; after the first prompt the card moves to Build on its own, then to You when it finishes, and the screen edge glows">
-</p>
+https://github.com/user-attachments/assets/c74c1d65-b144-4244-99b2-777bca691841
 
 <p align="center">
   <a href="../../releases/latest"><b>Download Rota (.dmg)</b></a>
@@ -67,7 +65,7 @@ In Spec-Driven Development (SDD), you write the spec first, build to the spec, t
 ### A built-in terminal that links the Session to a card as it starts
 
 <p align="center">
-  <img src="assets/pairing.en.gif" width="820" alt="Type codex in a Rota terminal; a banner asks which card to link to; after choosing a card and role, the first prompt completes the link">
+  <img src="assets/pairing.en.gif" width="820" alt="Start Codex in a Rota terminal and Rota asks which card to link; choose Hourly forecast as Spec, and the first prompt completes the link; Codex writes the spec file and the card is marked done">
 </p>
 
 - Every project has its own terminal. Type `claude` or `codex` there and Rota asks, right above the terminal, which card to link to and whether it's the Spec or the Build.
@@ -102,10 +100,6 @@ In Spec-Driven Development (SDD), you write the spec first, build to the spec, t
 
 - The usage panel in the toolbar shows the remaining 5-hour and weekly usage for Claude Code and Codex, so you can decide who takes the next turn.
 - Claude Code usage has to be turned on separately; see the [guide](docs/guide.en.md#usage).
-
-### Rota is built this way too
-
-Rota itself is developed with SDD: Claude Code and Codex take turns writing specs and building, review each other's work, and a person signs off on real devices. That has run for nearly 80 rounds so far. Every round's spec, review and sign-off is kept on record, and the app has more than 1,500 automated tests.
 
 ## Getting started
 

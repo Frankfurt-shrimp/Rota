@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>以規格驅動開發（SDD）流程為核心的多 Agent 協作看板</b><br>
-  讓 Claude Code 和 Codex 依「規格 → 實作 → 驗收」接力。誰在做哪件事、做到哪裡、下一步輪到誰，都在同一個畫面上。
+  讓 Claude Code 和 Codex 依「規格 → 實作 → 驗收」分工協作。誰在做哪件事、做到哪裡、下一步該交給誰，都在同一個畫面上。
 </p>
 
 <p align="center">
@@ -19,9 +19,7 @@
   <img alt="已經過 Apple 公證" src="https://img.shields.io/badge/Apple-%E5%B7%B2%E5%85%AC%E8%AD%89-success">
 </p>
 
-<p align="center">
-  <img src="assets/hero.gif" width="820" alt="在 Rota 終端機開啟 Claude Code，連結提議出現後連結為「實作」；送出 prompt 後卡片自動移到「實作」，完成後移到「我」，螢幕邊緣亮起光暈">
-</p>
+https://github.com/user-attachments/assets/d090cd56-3d2e-4f7d-860f-b366d5676d68
 
 <p align="center">
   <a href="../../releases/latest"><b>下載 Rota（.dmg）</b></a>
@@ -67,7 +65,7 @@
 ### 內建終端機，開啟時就把 Session 連到卡片
 
 <p align="center">
-  <img src="assets/pairing.gif" width="820" alt="在 Rota 終端機輸入 codex，上方橫幅詢問要連結到哪張卡片；選好卡片與角色，送出第一個 prompt 後自動完成連結">
+  <img src="assets/pairing.gif" width="820" alt="在 Rota 終端機開啟 Codex，上方詢問要連結到哪張卡片；選好「每小時預報」作為規格，送出第一個 prompt 後自動連結；Codex 寫好規格檔，卡片標示完成">
 </p>
 
 - 每個專案都有自己的終端機。在裡面輸入 `claude` 或 `codex`，終端機上方會問你：要連結到哪張卡片、負責規格還是實作。
@@ -102,10 +100,6 @@
 
 - 工具列可以打開用量面板，查看 Claude Code 和 Codex 的 5 小時與每週剩餘用量，決定下一棒要交給誰。
 - Claude Code 的用量需要在設定中另外開啟，做法見[使用指南](docs/guide.md#用量)。
-
-### Rota 本身就是這樣開發的
-
-Rota 也是用 SDD 流程開發的：Claude Code 和 Codex 輪流寫規格、實作，再互相 review，最後由人在真實裝置上驗收。到目前為止已經跑了將近 80 輪，每一輪的規格、review 和驗收紀錄都有保留，App 也有 1,500 多項自動測試。
 
 ## 開始使用
 
