@@ -23,12 +23,11 @@ A new Rota may bring new hooks or a new helper. Press **Update…**, review the 
 
 Check these in order:
 
-1. It was started in a **Rota project terminal**. The regular Terminal app does not suggest links.
+1. It was started in a **Rota card terminal**. A `claude` or `codex` you type yourself is asked **Spec** or **Build** above the terminal; one opened from New Card or **Open Spec and Build…** links without asking. The regular Terminal app does not suggest links; its Sessions wait in Unassigned Sessions.
 2. In **Settings → Agent Integrations**, that AI is **enabled** and does not need an update.
 3. Codex's hooks have been approved with `/hooks`.
-4. Link suggestions are not turned off in **Settings → Terminal**.
-5. **When you open Codex, Rota first asks which card to link it to; sending the first prompt completes the link.** If you chose **Later**, reopen it from **Session pairing** in the terminal's **⋯** menu. Claude Code suggests a link as soon as it opens.
-6. Codex in a Rota terminal runs **standalone** (`--no-daemon`) by default, so two Codex terminals in the same project are told apart. In this mode each Codex uses its own memory while open and frees it when it ends; `codex agents` does not list these Sessions; and choosing to keep a task in the background when you quit may not continue it. Only zsh is supported for now. For the shared mode, turn it off in **Settings → Terminal** or type `command codex` in the Rota terminal. In shared mode, if two terminals send a prompt at almost the same time, Rota cannot tell them apart and leaves the Session in **Unassigned** for you to pair by hand. If you open Codex in another terminal app in the same project folder, Rota may suggest that Session in your Rota terminal; check the Session ID in the suggestion.
+4. **When you open Codex, Rota first asks whether it is this card's Spec or Build; sending the first prompt completes the link.** If you chose **Later**, reopen it from **Session pairing** in the terminal's **⋯** menu. Claude Code suggests a link as soon as it opens.
+5. Codex in a Rota terminal runs **standalone** (`--no-daemon`) by default, so two Codex terminals in the same project are told apart. In this mode each Codex uses its own memory while open and frees it when it ends; `codex agents` does not list these Sessions; and choosing to keep a task in the background when you quit may not continue it. Only zsh is supported for now. For the shared mode, turn it off in **Settings → Terminal** or type `command codex` in the Rota terminal. In shared mode, if two terminals send a prompt at almost the same time, Rota cannot tell them apart and leaves the Session in **Unassigned** for you to pair by hand. If you open Codex in another terminal app in the same project folder, Rota may suggest that Session in your Rota terminal; check the Session ID in the suggestion.
 </details>
 
 <details>
@@ -36,7 +35,7 @@ Check these in order:
 
 1. Open Codex, type `/hooks` and approve Rota's hooks.
 2. Quit Codex with `/exit` and **start `codex` again**. A Codex that was already open before the approval does not run the new hooks, so it needs a restart.
-3. Send one prompt. Rota then marks the integration as enabled on its own and suggests a link; there is nothing to confirm in Settings.
+3. Send one prompt. Rota completes the check automatically and marks the integration as enabled; there is nothing to confirm in Settings.
 </details>
 
 <details>

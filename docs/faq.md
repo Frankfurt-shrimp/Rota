@@ -23,12 +23,11 @@
 
 請依序確認：
 
-1. 是在 **Rota 的專案終端機**中啟動的。一般的「終端機」App 不會提議。
+1. 是在 **Rota 的卡片終端機**中啟動的。自己輸入的 `claude`／`codex` 會在上方問「規格」還是「實作」；新增卡片或「一鍵開啟規格與實作…」開的會直接連結，不會問。一般的「終端機」App 不會提議，Session 會留在「待配對 Session」。
 2. 「設定 → Agent 整合」中，對應的 AI 是**已啟用**，而且沒有「需要更新」。
 3. Codex 的 hook 已經用 `/hooks` 核准過。
-4. 「設定 → 終端機」裡的連結提議沒有被關掉。
-5. **開啟 Codex 時，Rota 會先問要連結到哪張卡片；送出第一個 prompt 後自動完成。** 如果按了「稍後」，可以從終端機右上角「⋯」的「Session 配對」重新叫出。Claude Code 則是開啟時就直接提議。
-6. Rota 終端機中的 Codex 預設以**獨立模式**（`--no-daemon`）執行，所以同一個專案開兩個 Codex 也分得出是哪個終端機。這個模式下，每個 Codex 開著時各自佔用記憶體，結束就釋放；`codex agents` 看不到這些 Session；結束時選「留在背景」，工作可能不會繼續。目前只支援 zsh。想用共用模式，可以在「設定 → 終端機」關掉，或在 Rota 終端機輸入 `command codex`。共用模式下，兩個終端機幾乎同時送出 prompt 時，Rota 無法判斷，會把 Session 留在「未分配」，請手動配對。在其他終端機 App 中、同一個專案資料夾開 Codex 時，Rota 可能會在你的 Rota 終端機中提議它，請看清楚提議中的 Session ID。
+4. **開啟 Codex 時，Rota 會先問要連結成這張卡片的規格還是實作；送出第一個 prompt 後自動完成。** 如果按了「稍後」，可以從終端機右上角「⋯」的「Session 配對」重新叫出。Claude Code 則是開啟時就直接提議。
+5. Rota 終端機中的 Codex 預設以**獨立模式**（`--no-daemon`）執行，所以同一個專案開兩個 Codex 也分得出是哪個終端機。這個模式下，每個 Codex 開著時各自佔用記憶體，結束就釋放；`codex agents` 看不到這些 Session；結束時選「留在背景」，工作可能不會繼續。目前只支援 zsh。想用共用模式，可以在「設定 → 終端機」關掉，或在 Rota 終端機輸入 `command codex`。共用模式下，兩個終端機幾乎同時送出 prompt 時，Rota 無法判斷，會把 Session 留在「未分配」，請手動配對。在其他終端機 App 中、同一個專案資料夾開 Codex 時，Rota 可能會在你的 Rota 終端機中提議它，請看清楚提議中的 Session ID。
 </details>
 
 <details>
@@ -36,7 +35,7 @@
 
 1. 打開 Codex，輸入 `/hooks`，核准 Rota 的 hook。
 2. 用 `/exit` 結束 Codex，**再重新開一次** `codex`。核准之前就開著的 Codex 不會執行新的 hook，所以要重開。
-3. 送出一個 prompt。Rota 收到後會自動把整合標為已啟用，並提議連結卡片，不用再到設定按確認。
+3. 送出一個 prompt。Rota 收到後會自動完成檢查，把整合標為已啟用，不用再到設定按確認。
 </details>
 
 <details>

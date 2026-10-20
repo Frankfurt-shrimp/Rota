@@ -19,9 +19,9 @@
   <img alt="Notarized by Apple" src="https://img.shields.io/badge/Apple-notarized-success">
 </p>
 
-<p align="center">
-  <img src="assets/hero.en.gif" width="820" alt="Two Rota terminals side by side: Codex on the left linked as Spec, Claude Code on the right linked as Build; Codex writes the spec, Claude Code builds it, the card moves to You on its own and the screen edge glows">
-</p>
+https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
+
+<p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
   <a href="../../releases/latest"><b>Download Rota (.dmg)</b></a>
@@ -66,13 +66,13 @@ In Spec-Driven Development (SDD), you write the spec first, build to the spec, t
 
 ### A built-in terminal that links the Session to a card as it starts
 
-<p align="center">
-  <img src="assets/pairing.en.gif" width="820" alt="Start Codex in a Rota terminal and Rota asks which card to link; choose Hourly forecast as Spec, and the first prompt completes the link; Codex writes the spec file and the card is marked done">
-</p>
+https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 
-- Every project has its own terminal. Type `claude` or `codex` there and Rota asks, right above the terminal, which card to link to and whether it's the Spec or the Build.
-- For Codex, Rota asks before you send the first prompt. Choose first, and the link completes when you send it.
-- You can open several terminals in one project and link each to a different card without them getting mixed up.
+<p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
+
+- Every card can have up to two terminals. The Agents you choose when adding a card link to it by themselves; type `claude` or `codex` in one of the card's terminals and Rota asks above it whether it is this card's Spec or Build.
+- Codex is pre-linked before you send the first prompt, and the link completes when you send it. When Rota can't be sure, it asks above the terminal which card to link to.
+- **Choose Card…** at the top of the panel lists every card, cards with terminals first; several cards with terminals open never get mixed up.
 
 ### Drop images into the terminal and preview them before sending
 
@@ -92,7 +92,7 @@ In Spec-Driven Development (SDD), you write the spec first, build to the spec, t
 
 - After you add an app in Project Settings, Run and Stop appear in the toolbar. Destinations include an iPhone, iOS simulators, your Mac, Android phones and Android emulators.
 - An Android phone needs a cable only once, to turn on wireless use. After that, runs go over the phone's hotspot or the same Wi-Fi.
-- Running an app doesn't use the project's terminal. One app runs at a time, and Rota asks before switching.
+- Running an app doesn't use a terminal. One app runs at a time, and Rota asks before switching.
 
 ### See Claude Code and Codex usage in the toolbar
 
@@ -106,10 +106,10 @@ In Spec-Driven Development (SDD), you write the spec first, build to the spec, t
 ## Getting started
 
 1. **Add a project**: press **+** in the sidebar and choose the project folder.
-2. **Turn on the integrations**: on first launch a setup panel appears; press **Enable Integration…**. If you use Codex, also run `/hooks` in Codex once to approve. See [First-time setup](docs/setup.en.md).
+2. **Turn on the integrations**: on first launch a **Connect Claude Code and Codex** card appears at the top of the main window. Check **I have stopped all running Codex and Claude Code tasks.**, then press **Agree and Install**. If you use Codex, also run `/hooks` in Codex once to approve. See [First-time setup](docs/setup.en.md).
 3. **Add a card**: press **New Card** (⌘N) on the board and write what the work is.
-4. **Start Claude Code or Codex**: type `claude` or `codex` in the project's terminal.
-5. **Link the card**: when the banner appears above the terminal, choose a card, then **Spec** or **Build**.
+4. **Start Claude Code or Codex**: in the same form, choose Claude Code or Codex under **Spec by** and **Build by**, then **Save**. Rota opens this card's terminal, starts the Agent and links it to the card by itself.
+5. **Open more later**: right-click a card and choose **Open Spec and Build…**, pick an Agent for Spec and for Build, and they open already linked. Or choose **Open Terminal** for a plain terminal, type `claude` or `codex`, then choose **Spec** or **Build** above it.
 
 Everything after that, such as running several terminals, linking Sessions you skipped, and setting up app runs and wireless Android, is in the [guide](docs/guide.en.md).
 
@@ -132,8 +132,8 @@ Everything after that, such as running several terminals, linking Sessions you s
 ## Privacy and trust
 
 > - **Files it changes**: only `~/.claude/settings.json` and `~/.codex/hooks.json`. Rota adds its own entries only, backs up each file first, and never touches your other hooks.
-> - **Never read**: prompts, code, conversations or tool output.
-> - **Never uploaded**: everything stays on your Mac. No analytics, no server.
+> - **Never read**: prompts, code, conversations or tool output. The one exception: after you attach an image, Rota reads only the `[Image #N]` marker from the terminal's input line, and keeps nothing else.
+> - **Never uploaded**: everything stays on your Mac. No analytics, no server of ours. Only automatic updates read version information from GitHub, and you can turn them off.
 > - **Fully removable**: press **Uninstall** in the app and Rota's entries are removed; everything else stays as it was.
 >
 > Details: [Privacy](docs/privacy.en.md)
@@ -149,7 +149,7 @@ Everything after that, such as running several terminals, linking Sessions you s
 
 ## Updating and removing
 
-- **Update**: download the new `.dmg` from [Releases](../../releases/latest) and replace Rota. Your data is kept. If Rota says the integration needs an update, press **Update…** once.
+- **Update**: from 1.1.0 on, Rota checks for a new version each time it opens, downloads it in the background and installs it when you quit Rota; the board also offers **Restart Now** to update right away. You can turn automatic updates off, or use **Check for Updates…**, in Settings → Advanced & Diagnostics → Updates. To get from 1.0.0 to 1.1.0, download the new `.dmg` from [Releases](../../releases/latest) once and replace Rota; your data is kept. If Rota says the integration needs an update, press **Update…** once.
 - **Remove**: uninstall the integration in **Settings → Agent Integrations** first, then delete the app. See [Uninstall](docs/uninstall.en.md).
 
 ## FAQ

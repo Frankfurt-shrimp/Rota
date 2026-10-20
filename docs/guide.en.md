@@ -18,29 +18,48 @@ This page covers the parts of Rota that need some explaining. If you haven't fin
 
 A card follows a Claude Code or Codex Session only after the Session is linked to it. Each card has a Spec slot and a Build slot, and each slot holds one Session.
 
+
+### Card terminals
+
+Rota's terminals belong to cards, at most two per card. A card's terminals are plain terminals, not Spec or Build terminals; once an Agent in one is linked, its tab and the mark on the card read "Spec · Codex" and so on, otherwise "Terminal 1" and "Terminal 2".
+
+- **When you add a card**: choose Claude Code or Codex under **Spec by** and **Build by**. After you save, Rota opens one terminal for each role you chose an Agent for, types `claude` or `codex`, and links it to this card in that role without asking. The form remembers your last choice.
+- **Both at once, later**: right-click the card and choose **Open Spec and Build…**, pick an Agent for Spec and for Build, and press **Open**. As with the New Card form, each links to its role without asking, and the choices are the form's. The item is greyed out when the card already has two terminals; with one place left you can choose only one row. If a role you chose is already linked, its row says "Linked to Session … (running / state unknown / ended)", and **Open** first asks with the same alert: only **Replace and Open** opens; **Cancel** opens nothing.
+- **A plain terminal**: choose **Open Terminal** from the card's menu or its details, or press **Open Terminal** or **+** in the panel. With two open, it only shows them.
+- **Switching the panel**: click a card, the terminal mark on it, or a card in **Choose Card…** at the top of the panel, and the bottom panel shows that card's terminals — or, before it has any, **Open Terminal**; nothing starts until you press it.
+- **Choose Card…**: on the all-projects board, **Terminals Open** comes first — the cards with terminals open, as "Project - Card", one click away — then **All Projects**, with a submenu per project listing its cards, those with terminals first. On a single project's board the menu has one level. The card shown, and its project, are ticked.
+- **Panel title**: "Project › Card", following a rename; when space is short, the project name shortens first.
+- **Good to know**:
+  - an Agent whose integration is off is greyed out;
+  - if no Agent is seen within 30 seconds, a note above the terminal asks you to check that it is installed;
+
+### When Rota asks
+
+When you type `claude` or `codex` yourself in a card's terminal, Rota asks above that terminal every time: link it as this card's **Spec** or **Build**? Only this card is offered. Agents opened from New Card or **Open Spec and Build…** aren't asked — unless another Session took that role after you chose (running or ended); then Rota asks and says why.
+
 ### Claude Code
 
-<p align="center">
-  <img src="../assets/guide/link-claude.en.gif" width="820" alt="Type claude in a Rota terminal; a link suggestion appears above it; choose a card and Build to link">
-</p>
+https://github.com/user-attachments/assets/b40525f2-1652-4b5c-8a3e-6a2052a866d3
 
-1. Type `claude` in the project's Rota terminal.
-2. "Claude Code Session detected. Link it to a card?" appears above the terminal.
-3. If the project has one active card, press **Link this card…**. If it has several, press **Choose Card…** and pick one from the list.
-4. Choose the role: **Spec · Claude Code** or **Build · Claude Code**. When you picked the card from the list, choose the role there and press **Link**.
-5. Rota shows "Linked to …". For 6 seconds you can press **Undo** to take the link back.
+<p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
+
+1. Start `claude` in a card's terminal.
+2. "Claude Code started in this card's terminal. Link it as Spec or Build?" appears above the terminal.
+3. Press **Spec · Claude Code** or **Build · Claude Code**. The role this terminal linked last stands out, but nothing links until you press one.
+4. If that role has no link yet, pressing it links. If another Session holds it — still running or already ended — an alert first asks in the middle of the window; see [Replacing a linked Session](#replacing-a-linked-session).
+5. Rota shows "Linked to …". For 6 seconds you can press **Undo** to take the link back. The tab now reads "Spec · Claude Code" or "Build · Claude Code".
 
 ### Codex
 
-<p align="center">
-  <img src="../assets/guide/link-codex.en.gif" width="820" alt="Type codex in a Rota terminal; a banner asks which card to link to; after choosing, it waits, and the first prompt completes the link">
-</p>
+https://github.com/user-attachments/assets/0cea3bec-33e9-4fc3-9ba6-6a15d3cc644a
+
+<p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 Codex doesn't create a Session until you send the first prompt, so Rota asks as soon as Codex opens:
 
-1. Type `codex` in the project's Rota terminal and press Return.
-2. Within one to three seconds, "Codex opened in this terminal. Which card should it link to?" appears above the terminal.
-3. Choose a card, then **Spec** or **Build**. The banner changes to "Pre-linked to … Waiting for Codex's first prompt."
+1. Type `codex` in a card's terminal and press Return.
+2. Within one to three seconds, "Codex opened in this card's terminal. Link it as Spec or Build?" appears above the terminal.
+3. Choose **Spec** or **Build** (replacing a linked Session asks first, with the same alert). The banner changes to "Pre-linked to … Waiting for Codex's first prompt."
 4. Send your first prompt as usual. The link completes by itself; there's nothing else to press.
 
 If you press **Cancel** or quit Codex before sending a prompt, the pre-link is dropped and nothing is linked.
@@ -53,11 +72,18 @@ If you press **Cancel** or quit Codex before sending a prompt, the pre-link is d
 
 ### Replacing a linked Session
 
-If a slot already holds a Session, its role option reads "— replaces (Session ID)", and choosing it replaces that link. If the slot changes after you choose, Rota asks "Replace the linked Session?" and names the one that would be replaced. Replacing changes only Rota's link; the old Session stays in the card's Session History and nothing is deleted.
+In a card's terminal, a role that is already linked says which Session holds it and its state under its button, such as "Linked to Session … (running)". Choose such a role and — whether the old Session is running, of unknown state or has ended — an alert asks first, in the middle of the window: "Replace the currently linked Session?", naming the card, the role, the Session it replaces and its state. Only **Replace and Link** replaces the link, and for 6 seconds you can press **Undo**; **Cancel** or Esc goes back to the question with nothing changed. Return doesn't replace, and **Cancel** starts with the focus, so Space doesn't either — a stray keypress can't. **Open Spec and Build…** asks with the same alert before it replaces a linked Session. If the slot changes while the alert is open, **Replace and Link** replaces nothing and the same alert asks again, naming the new Session. Replacing changes only Rota's link; the old Session stays in the card's Session History and nothing is deleted.
 
-### Turning link suggestions off
+When another Session takes the link of a Session that is still running, its terminal says "This Session's link (…) was replaced by Session …". **Relink…** asks for the role again (a replacement asks with the same alert); **Got It** hides it. If Rota can't ask here (for example, it can't confirm this Session runs in this terminal), the line says why; link it from Unassigned Sessions instead. Rota never asks by itself, so two terminals can't keep taking the slot from each other. A link you took back with **Undo** shows no such line.
 
-Go to **Settings → Terminal** and turn off **Suggest linking Sessions started in a Rota terminal to a card**.
+### Coming back with `--resume`
+
+When you return to a Session with `claude --resume` or `codex resume` in the same terminal:
+
+- if it has **no** link (another Session took it, you undid it, or you pressed **Later**), Rota asks again whether it is Spec or Build;
+- if its link is still there, Rota doesn't ask.
+
+`/clear`, compaction and fork aren't a resume and don't ask again.
 
 ## Unassigned Sessions
 
@@ -79,7 +105,7 @@ A Session that has already ended is marked "This Session has ended, so it can no
 
 ## Several terminals at once
 
-You can open several Rota terminals in one project, run Claude Code or Codex in each, and link each to a different card. Every link suggestion appears above the terminal that started it.
+Every card can open its own terminals (up to two), run Claude Code or Codex in each, and link each to its own card. Switch between cards with **Choose Card…** at the top of the panel. Rota always asks above the terminal the Agent started in.
 
 ### Codex standalone mode
 
@@ -121,6 +147,8 @@ The button appears only while the turn is still open. After you mark it, the car
 ### Archiving a card
 
 Open the card's details and press **Archive Card…** at the bottom left. After you confirm, the card leaves the board. You can find it in **Archive History** in the sidebar and restore it at any time.
+
+The card's terminals end with it. If something is still running in them, Rota asks first. Restoring the card does not reopen them.
 
 ## Completion glow
 
@@ -181,7 +209,7 @@ If the panel says a newer Claude Code Session is needed, update Claude Code and 
 Notes:
 
 - One app runs at a time. If you press ▶︎ while another app is running, Rota tells you which one it will stop and which one it will run.
-- Running an app doesn't use the project's terminal.
+- Running an app doesn't use a terminal.
 - Quitting Rota stops builds in progress. Apps and emulators that are already open keep running.
 
 ### The iPhone is greyed out in the destination menu

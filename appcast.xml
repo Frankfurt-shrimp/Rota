@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Rota</title>
+    <link>https://github.com/Frankfurt-shrimp/Rota</link>
+    <description>Rota updates</description>
+    <language>en</language>
+    <!-- Newest item first. Add each release with appcast-item.sh after the DMG is stapled. -->
+    <item>
+      <title>Rota 1.1.0</title>
+      <link>https://github.com/Frankfurt-shrimp/Rota/releases/tag/v1.1.0</link>
+      <sparkle:version>56</sparkle:version>
+      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/Frankfurt-shrimp/Rota/releases/tag/v1.1.0</sparkle:releaseNotesLink>
+      <pubDate>Tue, 20 Oct 2026 13:58:15 +0800</pubDate>
+      <enclosure url="https://github.com/Frankfurt-shrimp/Rota/releases/download/v1.1.0/Rota-1.1.0-update.dmg" sparkle:edSignature="e9m0YyCbRF1n7e92GI5AFdl6jLsCkkDb3ELwIGiG6jJdb8sjDm8YqO0PAE6lxWl3KIX0YZLgWIzEAy/3Hq83CA==" length="19726285" type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>

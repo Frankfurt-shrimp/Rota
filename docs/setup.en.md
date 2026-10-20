@@ -13,7 +13,7 @@ Install and sign in to at least one:
 
 ## 2. Enable the integration
 
-A setup panel appears the first time you open Rota. Press **Enable Integration…**. You can also do it later in **Settings → Agent Integrations**.
+The first time you open Rota, a **Connect Claude Code and Codex** card appears at the top of the main window. Check **I have stopped all running Codex and Claude Code tasks.**, then press **Agree and Install**. You can also press **Later** and do it in **Settings → Agent Integrations**.
 
 Before anything is written, Rota lists exactly what it will do and waits for you to confirm:
 
@@ -23,6 +23,8 @@ Before anything is written, Rota lists exactly what it will do and waits for you
 | Adds entries to `~/.codex/hooks.json` | The same. If the file does not exist, Rota creates one that holds only its own entries, readable only by you |
 | Backs up first | Each file is backed up before it changes, and a failed write is rolled back |
 | Installs a small helper | It lives in `~/Library/Application Support/Shiftboard/bin/`; the hooks call it to record start and stop times |
+
+After **Agree and Install**, the card lists what is left to do; press **Done** to close it when you have finished.
 
 > Rota records only those moments. It never reads prompts, code or conversations. See [Privacy](privacy.en.md).
 
@@ -44,10 +46,8 @@ Send one real prompt in Claude Code or Codex. Rota completes the check when the 
 
 1. Press ＋ in the sidebar to add a project and choose its folder.
 2. Press **New Card** on the board.
-3. Type `claude` or `codex` in the project terminal.
-4. When the suggestion appears above the terminal, pick a card, then **Spec** or **Build**.
-
-To stop the suggestions, turn off **Suggest linking Sessions started in a Rota terminal to a card** in **Settings → Terminal**.
+3. In the form, choose Claude Code or Codex under **Spec by** and **Build by**, then **Save**. Rota opens this card's terminal, starts the Agent and links it to the card by itself.
+4. Later, right-click a card and choose **Open Spec and Build…**, or **Open Terminal** for a plain terminal. When you start `claude` or `codex` yourself in a plain one, Rota asks above it whether it is this card's **Spec** or **Build**.
 
 ## Optional features
 
