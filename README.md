@@ -22,7 +22,8 @@
 https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 
 <p align="center">
-  <a href="../../releases/latest"><b>下載 Rota（.dmg）</b></a>
+  <a href="../../releases/download/v1.1.0/Rota-1.1.0.dmg"><b>下載 Rota 1.1.0（.dmg）</b></a><br>
+  <sub><a href="../../releases">所有版本與更新紀錄</a></sub>
 </p>
 
 **安裝**：打開下載的 `.dmg` → 把 Rota 拖進「應用程式」→ 從「應用程式」開啟 Rota。
