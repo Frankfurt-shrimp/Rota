@@ -175,6 +175,8 @@ The glow never takes focus and can't be clicked. With Reduce Motion or Low Power
 
 The toolbar has a usage button with a gauge icon and the usage figures (it says **Not enabled** until you turn usage on). Press it to open the **AI quota** panel with the 5-hour and weekly usage for Claude Code and Codex. Codex shows how much is left and Claude Code shows how much is used, the same way each service reports it.
 
+The dot before each group in the toolbar shows how fresh the figures are: solid when current, a hollow ring when old, and a hollow ring with a red badge when the latest read failed. Hold the pointer over the usage figures for a line-by-line Help: one block per service, one line per window.
+
 ### Turning on account usage
 
 Usage for Claude Code and Codex is turned on separately, one switch each:

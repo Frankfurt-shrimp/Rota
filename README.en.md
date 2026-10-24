@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 <p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
-  <a href="../../releases/download/v1.1.0/Rota-1.1.0.dmg"><b>Download Rota 1.1.0 (.dmg)</b></a><br>
+  <a href="../../releases/download/v1.1.1/Rota-1.1.1.dmg"><b>Download Rota 1.1.1 (.dmg)</b></a><br>
   <sub><a href="../../releases">All versions and release notes</a></sub>
 </p>
 
@@ -150,7 +150,7 @@ Everything after that, such as running several terminals, linking Sessions you s
 
 ## Updating and removing
 
-- **Update**: from 1.1.0 on, Rota checks for a new version each time it opens, downloads it in the background and installs it when you quit Rota; the board also offers **Restart Now** to update right away. You can turn automatic updates off, or use **Check for Updates…**, in Settings → Advanced & Diagnostics → Updates. To get from 1.0.0 to 1.1.0, download the new `.dmg` from [Releases](../../releases/latest) once and replace Rota; your data is kept. If Rota says the integration needs an update, press **Update…** once.
+- **Update**: from 1.1.0 on, Rota checks for a new version each time it opens, downloads it in the background and installs it when you quit Rota; the board also offers **Restart Now** to update right away. You can turn automatic updates off, or use **Check for Updates…**, in Settings → Advanced & Diagnostics → Updates. If you are still on 1.0.0, download the latest `.dmg` from [Releases](../../releases/latest) once and replace Rota; your data is kept. If Rota says the integration needs an update, press **Update…** once.
 - **Remove**: uninstall the integration in **Settings → Agent Integrations** first, then delete the app. See [Uninstall](docs/uninstall.en.md).
 
 ## FAQ

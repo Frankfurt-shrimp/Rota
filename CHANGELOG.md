@@ -3,6 +3,22 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.1.1 — `!` 之後也會完成、額度新舊看圓點 ｜ Turns after `!` complete; quota freshness on the dot
+
+**中文**
+
+### 修正
+
+- **用 `!` 執行指令之後，那一輪也會完成**：在 Claude Code 用 `!` 執行 shell 指令後，模型針對輸出回答的那一輪，Rota 原本看不到結束：卡片不亮光暈、不移動。現在回答完約 5 秒後會完成並亮光暈，Session 紀錄記一次完成；因為 Claude Code 沒有送出開始事件，這一輪的時長顯示為未知。送出訊息後按 Esc、再改用 `!` 時，原本那一輪會一直停在「執行中」，現在會正常完成。Codex 的 `!` 不會開始新的一輪，不受影響。
+- **工具列額度的新舊看圓點**：數字前面的橘色時鐘拿掉了，改成看每組前面的圓點：實心是最新，空心圈是舊資料，空心圈加紅點是最近一次讀取失敗（不論上次讀數多舊）。滑鼠停在額度上的說明改成分行顯示，每個服務一段、每個額度一行。
+
+**English**
+
+### Fixed
+
+- **The turn after a `!` command completes**: after running a shell command with `!` in Claude Code, Rota never saw the end of the turn in which the model answers its output: no glow, no move. That turn now completes about 5 seconds after the answer, with the glow, and counts as one completion; its duration shows as unknown, because Claude Code sends no start for it. Sending a message, pressing Esc and then using `!` used to leave that turn on Running; it now completes normally. Codex's `!` does not start a turn and is unaffected.
+- **Quota freshness on the dot**: the orange clock before each number is gone. Each group's dot now shows freshness: solid when current, a hollow ring when old, and a hollow ring with a red badge when the latest read failed, however old the reading. The quota Help is laid out in lines: one block per service, one line per window.
+
 ## 1.1.0 — 每張卡片有自己的終端機 ｜ Every card gets its own terminals
 
 **中文**
