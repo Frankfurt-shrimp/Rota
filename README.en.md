@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 <p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
-  <a href="../../releases/download/v1.1.1/Rota-1.1.1.dmg"><b>Download Rota 1.1.1 (.dmg)</b></a><br>
+  <a href="../../releases/download/v1.1.2/Rota-1.1.2.dmg"><b>Download Rota 1.1.2 (.dmg)</b></a><br>
   <sub><a href="../../releases">All versions and release notes</a></sub>
 </p>
 

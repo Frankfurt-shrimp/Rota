@@ -3,6 +3,30 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.1.2 — 拖動視窗變順、「移到這裡」立刻生效 ｜ Smooth window resizing; Move Here takes effect at once
+
+**中文**
+
+### 改進
+
+- **拖動視窗大小變順**：拖動視窗邊緣時，看板原本每一格都要重新排版，卡片越多越卡。現在拖動中看板區會蓋上一層和欄位同色的蒙版（三欄的底色、外框和圓點），放開滑鼠後用新的大小排好，再淡出蒙版。側邊欄、工具列和終端機面板照常跟著視窗。開啟「減少動態效果」時不淡入淡出，直接切換。
+
+### 修正
+
+- **「移到這裡」立刻生效**：在另一個視窗按「移到這裡」，終端機原本要等 5–10 秒，或把終端機面板收起再拉開才會出現。現在按下就會出現在這個視窗。
+- **終端機面板上方的空白**：終端機開在別的視窗，或已經彈出時，面板的標題列和工具列之間不再多出一行空白。
+
+**English**
+
+### Improved
+
+- **Smooth window resizing**: dragging a window edge used to lay out the whole board again for every frame, slower with every card. While you drag, the board is now covered by a mask in the lanes' own colours (each lane's tint, outline and dot); when you let go, the board is laid out at the new size and the mask fades out. The sidebar, toolbar and terminal panel follow the window as before. With Reduce Motion on, it switches without fading.
+
+### Fixed
+
+- **Move Here takes effect at once**: after **Move Here** in another window, the terminal used to appear only after 5–10 seconds, or after collapsing and expanding the terminal panel. It now appears in that window right away.
+- **Blank band above the terminal pane**: when a terminal is open in another window or popped out, the panel no longer shows an empty line between its title bar and the pane toolbar.
+
 ## 1.1.1 — `!` 之後也會完成、額度新舊看圓點 ｜ Turns after `!` complete; quota freshness on the dot
 
 **中文**

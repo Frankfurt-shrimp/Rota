@@ -22,7 +22,7 @@
 https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 
 <p align="center">
-  <a href="../../releases/download/v1.1.1/Rota-1.1.1.dmg"><b>下載 Rota 1.1.1（.dmg）</b></a><br>
+  <a href="../../releases/download/v1.1.2/Rota-1.1.2.dmg"><b>下載 Rota 1.1.2（.dmg）</b></a><br>
   <sub><a href="../../releases">所有版本與更新紀錄</a></sub>
 </p>
 
