@@ -3,6 +3,32 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.2.1 — 輸入框更好用 ｜ A friendlier input box
+
+**中文**
+
+### 改進
+
+- **輸入框更明顯**：預設兩行，文字多了會往上長（最多十行，不超過終端機面板的四成）；字放大，有焦點時外框用強調色，提示文字也寫出 Enter、Shift+Enter 和 ↑ 的用法。
+- **句中也能用 `/`**：在句子中間打 `/`，會列出 skill 和自訂指令。
+
+### 修正
+
+- 打中文時，提示文字不再和還沒確定的字疊在一起。
+- 輸入框的文字剛好換行時，不再只顯示最後一行。
+
+**English**
+
+### Improved
+
+- **An input box that stands out**: it starts two lines tall and grows with your text (up to ten lines, and no more than 40% of the terminal panel). The text is larger, the edge takes the accent colour while you type, and the placeholder shows Enter, Shift+Enter and ↑.
+- **`/` mid-sentence**: type `/` anywhere in a sentence to list skills and custom commands.
+
+### Fixed
+
+- While an input method is composing, the placeholder no longer overlaps the text.
+- Text that ends right at a line break no longer shows only its last line.
+
 ## 1.2.0 — 終端機輸入框 ｜ A terminal input box
 
 **中文**

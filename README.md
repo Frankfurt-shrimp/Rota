@@ -22,7 +22,7 @@
 https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 
 <p align="center">
-  <a href="../../releases/download/v1.2.0/Rota-1.2.0.dmg"><b>下載 Rota 1.2.0（.dmg）</b></a><br>
+  <a href="../../releases/download/v1.2.1/Rota-1.2.1.dmg"><b>下載 Rota 1.2.1（.dmg）</b></a><br>
   <sub><a href="../../releases">所有版本與更新紀錄</a></sub>
 </p>
 
@@ -79,7 +79,7 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 
 - 每個卡片終端機下方有一個輸入框，可以像一般文字框一樣編輯要給 Claude Code 或 Codex 的訊息，注音等輸入法照常可用。
 - Agent 正在執行時，訊息會排隊，這一輪結束後依序送出；排隊的訊息可以立即送出、編輯或取消。
-- 打 `/` 會列出指令和 skill，按 ↑／↓ 可以叫回之前送過的 prompt，和 CLI 一樣。
+- 打 `/` 會列出指令和 skill（句子中間也可以叫出 skill），按 ↑／↓ 可以叫回之前送過的 prompt，和 CLI 一樣。
 - 檔案和圖片可以拖進輸入框或用 ⌘V 貼上，跟著那則訊息一起送出；點一下附件就能用「快速查看」預覽。
 - 不想用時，可以在「設定 → 終端機」關掉「顯示終端機輸入框」。
 

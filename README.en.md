@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 <p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
-  <a href="../../releases/download/v1.2.0/Rota-1.2.0.dmg"><b>Download Rota 1.2.0 (.dmg)</b></a><br>
+  <a href="../../releases/download/v1.2.1/Rota-1.2.1.dmg"><b>Download Rota 1.2.1 (.dmg)</b></a><br>
   <sub><a href="../../releases">All versions and release notes</a></sub>
 </p>
 
@@ -83,7 +83,7 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 
 - Every card terminal has an input box below it. Edit your message to Claude Code or Codex as in any text field; input methods work as usual.
 - While the agent is working, messages wait in a queue and go out in order when the turn ends. A queued message can be sent now, edited or cancelled.
-- Type `/` to list commands and skills, and press ↑/↓ to bring back earlier prompts, as in the CLI.
+- Type `/` to list commands and skills (skills mid-sentence too), and press ↑/↓ to bring back earlier prompts, as in the CLI.
 - Drag or paste (⌘V) files and images into the box; they go out with that message. Click an attachment to preview it in Quick Look.
 - To hide it, turn off **Show terminal input box** in Settings → Terminal.
 
