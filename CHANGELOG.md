@@ -3,6 +3,34 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.2.0 — 終端機輸入框 ｜ A terminal input box
+
+**中文**
+
+### 新功能
+
+- **終端機輸入框**：每個卡片終端機下方多了一個輸入框，可以像一般文字框一樣編輯要給 Claude Code 或 Codex 的訊息，注音等輸入法照常可用。
+  - Agent 正在執行時，訊息會**排隊**，這一輪結束後依序送出；排隊的訊息可以立即送出、編輯或取消。
+  - 打 `/` 會列出**指令和 skill**，和 CLI 一樣（Codex 打 `$` 列出 skill）。
+  - 按 ↑／↓ 可以叫回之前送過的 prompt，和 CLI 一樣。
+  - **檔案和圖片**可以拖進輸入框或用 ⌘V 貼上，跟著那則訊息一起送出。
+  - 沒確認送達時，佇列會先暫停，等你決定；Agent 已經回到 shell 時不會送，文字不會被當成指令執行。
+  - Claude Code 的建議 prompt 按 Tab 就能帶進來；新開的 Codex 也能從這裡送第一句。
+  - 不想用時，可以在設定裡關掉。
+
+**English**
+
+### New
+
+- **A terminal input box**: every card terminal now has an input box below it. Edit your message to Claude Code or Codex as in any text field.
+  - While the agent is working, messages **wait in a queue** and go out in order when the turn ends. A queued message can be sent now, edited or cancelled.
+  - Type `/` to list **commands and skills**, as in the CLI (`$` lists skills in Codex).
+  - Press ↑/↓ to bring back earlier prompts, as in the CLI.
+  - Drag or paste (⌘V) **files and images** into the box; they go out with that message.
+  - If a send isn't confirmed, the queue pauses until you decide. Nothing is sent once the agent has quit to the shell, so your text never runs as a command.
+  - Press Tab to bring in Claude Code's suggested prompt. A new Codex can get its first message here too.
+  - You can turn it off in Settings.
+
 ## 1.1.2 — 拖動視窗變順、「移到這裡」立刻生效 ｜ Smooth window resizing; Move Here takes effect at once
 
 **中文**

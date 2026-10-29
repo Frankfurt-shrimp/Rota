@@ -7,6 +7,16 @@
     <language>en</language>
     <!-- Newest item first. Add each release with appcast-item.sh after the DMG is stapled. -->
     <item>
+      <title>Rota 1.2.0</title>
+      <link>https://github.com/Frankfurt-shrimp/Rota/releases/tag/v1.2.0</link>
+      <sparkle:version>64</sparkle:version>
+      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/Frankfurt-shrimp/Rota/releases/tag/v1.2.0</sparkle:releaseNotesLink>
+      <pubDate>Fri, 30 Oct 2026 02:11:05 +0800</pubDate>
+      <enclosure url="https://github.com/Frankfurt-shrimp/Rota/releases/download/v1.2.0/Rota-1.2.0-update.dmg" sparkle:edSignature="6l/BEqGeCJv4yrnHZxNY7mFkBQri6ATx0K2spiRYuwXL0C7CG0FKzzmL67oNu7uXn2l8iqNS5jTv4TeoMFDSAw==" length="20655749" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Rota 1.1.2</title>
       <link>https://github.com/Frankfurt-shrimp/Rota/releases/tag/v1.1.2</link>
       <sparkle:version>60</sparkle:version>

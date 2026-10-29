@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 <p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
-  <a href="../../releases/download/v1.1.2/Rota-1.1.2.dmg"><b>Download Rota 1.1.2 (.dmg)</b></a><br>
+  <a href="../../releases/download/v1.2.0/Rota-1.2.0.dmg"><b>Download Rota 1.2.0 (.dmg)</b></a><br>
   <sub><a href="../../releases">All versions and release notes</a></sub>
 </p>
 
@@ -74,6 +74,18 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 - Every card can have up to two terminals. The Agents you choose when adding a card link to it by themselves; type `claude` or `codex` in one of the card's terminals and Rota asks above it whether it is this card's Spec or Build.
 - Codex is pre-linked before you send the first prompt, and the link completes when you send it. When Rota can't be sure, it asks above the terminal which card to link to.
 - **Choose Card…** at the top of the panel lists every card, cards with terminals first; several cards with terminals open never get mixed up.
+
+### Write messages in the input box under the terminal
+
+<p align="center">
+  <img src="assets/composer.en.png" width="820" alt="The input box under a Rota card terminal: two attachment chips, settings-mockup.png and spec-notes.md, above the message /compact keep the settings page decisions, with /compact in blue">
+</p>
+
+- Every card terminal has an input box below it. Edit your message to Claude Code or Codex as in any text field; input methods work as usual.
+- While the agent is working, messages wait in a queue and go out in order when the turn ends. A queued message can be sent now, edited or cancelled.
+- Type `/` to list commands and skills, and press ↑/↓ to bring back earlier prompts, as in the CLI.
+- Drag or paste (⌘V) files and images into the box; they go out with that message. Click an attachment to preview it in Quick Look.
+- To hide it, turn off **Show terminal input box** in Settings → Terminal.
 
 ### Drop images into the terminal and preview them before sending
 
@@ -133,7 +145,7 @@ Everything after that, such as running several terminals, linking Sessions you s
 ## Privacy and trust
 
 > - **Files it changes**: only `~/.claude/settings.json` and `~/.codex/hooks.json`. Rota adds its own entries only, backs up each file first, and never touches your other hooks.
-> - **Never read**: prompts, code, conversations or tool output. The one exception: after you attach an image, Rota reads only the `[Image #N]` marker from the terminal's input line, and keeps nothing else.
+> - **Never read**: prompts, code, conversations or tool output. There are three exceptions, all used in memory only, never kept or uploaded: the terminal input box and attachments look at the screen around the input line (for example the `[Image #N]` marker, or whether the agent is back at its input line); the input box's `/` list reads the names and descriptions at the top of skill and command files; and pressing ↑/↓ in the input box reads Claude Code's and Codex's own prompt history.
 > - **Never uploaded**: everything stays on your Mac. No analytics, no server of ours. Only automatic updates read version information from GitHub, and you can turn them off.
 > - **Fully removable**: press **Uninstall** in the app and Rota's entries are removed; everything else stays as it was.
 >

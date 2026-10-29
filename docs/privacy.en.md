@@ -23,7 +23,15 @@
 
 Data from the hooks is filtered before anything reaches the disk, so none of the above is ever stored.
 
-The one exception is the attachment tray: for about 1.5 seconds after you drop or paste an image into a Rota terminal, Rota looks at the screen around the terminal's input line for the `[Image #N]` marker Claude Code or Codex shows, and uses it to name the tray item and its preview. While the tray holds attachments that have not been sent, Rota looks at the same area every 0.25 seconds, comparing it only with the paths Rota itself typed and those `[Image #N]` markers, to tell whether you deleted an attachment from the input line — if you did, it leaves the tray. To recognise a deletion Rota briefly remembers a few characters on either side of the attachment, in memory only and only to compare. Nothing else on screen is kept, logged or sent anywhere.
+There are four exceptions. What Rota sees or reads in them is used in memory only: never kept, logged or sent anywhere.
+
+**The attachment tray**: for about 1.5 seconds after you drop or paste an image into a Rota terminal, Rota looks at the screen around the terminal's input line for the `[Image #N]` marker Claude Code or Codex shows, and uses it to name the tray item and its preview. While the tray holds attachments that have not been sent, Rota looks at the same area every 0.25 seconds, comparing it only with the paths Rota itself typed and those `[Image #N]` markers, to tell whether you deleted an attachment from the input line — if you did, it leaves the tray. To recognise a deletion Rota briefly remembers a few characters on either side of the attachment, in memory only and only to compare. Nothing else on screen is kept, logged or sent anywhere.
+
+**The terminal input box**: so that a message never goes into a menu, Rota looks at the screen around the terminal's input line before sending a message to Codex, to check that Codex is back at its own input line. When Claude Code shows a dimmed suggested prompt, the input box reads that hint from the same place. When you attach an image, Rota again recognises only the `[Image #N]` marker, to know the image reached the agent's input line before it sends the text.
+
+**The `/` list**: to list commands and skills, Rota reads the name and description at the top of these files (at most 8 KB of each, at most 500 files at a time): the skills, commands, and enabled plugins' skills and commands in `~/.claude`; Codex's skills and prompts in `CODEX_HOME` (`~/.codex` when it is not set) and `~/.agents`; and the skills and commands under `.claude`, `.codex` and `.agents` in the card's project folder. Nothing else in those files is read.
+
+**↑/↓ prompt recall**: when you press ↑ on the first line of the input box, Rota reads the CLI's own prompt history, the same file the CLI reads when you press ↑ there: for Claude Code, this project's entries in `~/.claude/history.jsonl`; for Codex, `history.jsonl` in `CODEX_HOME` (`~/.codex` when it is not set). Rota reads only the last 1 MB of the file and at most 200 entries, keeps them in memory only, and never writes, copies or logs them.
 
 ## Where the data lives
 

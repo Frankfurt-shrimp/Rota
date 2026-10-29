@@ -22,7 +22,7 @@
 https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 
 <p align="center">
-  <a href="../../releases/download/v1.1.2/Rota-1.1.2.dmg"><b>下載 Rota 1.1.2（.dmg）</b></a><br>
+  <a href="../../releases/download/v1.2.0/Rota-1.2.0.dmg"><b>下載 Rota 1.2.0（.dmg）</b></a><br>
   <sub><a href="../../releases">所有版本與更新紀錄</a></sub>
 </p>
 
@@ -70,6 +70,18 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 - 每張卡片最多可以開兩個終端機。新增卡片時選好的 Agent 會自動連結到這張卡片；在卡片的終端機裡自己輸入 `claude` 或 `codex`，上方會問要連結成這張卡片的規格還是實作。
 - Codex 在送出第一個 prompt 之前就先預先連結，送出第一個 prompt 時自動完成。Rota 無法確定時，終端機上方會問你要連結到哪張卡片。
 - 面板上方的「選擇卡片…」列出所有卡片，有終端機的排在前面；好幾張卡片同時開著終端機，也不會互相搞混。
+
+### 在終端機下方的輸入框寫訊息
+
+<p align="center">
+  <img src="assets/composer.png" width="820" alt="Rota 卡片終端機下方的輸入框：上面有兩個附件小卡「設定頁草圖.png」和「規格筆記.md」，下面是訊息「/compact 保留設定頁的決定」，其中 /compact 是藍色">
+</p>
+
+- 每個卡片終端機下方有一個輸入框，可以像一般文字框一樣編輯要給 Claude Code 或 Codex 的訊息，注音等輸入法照常可用。
+- Agent 正在執行時，訊息會排隊，這一輪結束後依序送出；排隊的訊息可以立即送出、編輯或取消。
+- 打 `/` 會列出指令和 skill，按 ↑／↓ 可以叫回之前送過的 prompt，和 CLI 一樣。
+- 檔案和圖片可以拖進輸入框或用 ⌘V 貼上，跟著那則訊息一起送出；點一下附件就能用「快速查看」預覽。
+- 不想用時，可以在「設定 → 終端機」關掉「顯示終端機輸入框」。
 
 ### 把圖片拖進終端機，送出前先預覽
 
@@ -129,7 +141,7 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 ## 隱私與信任
 
 > - **會改動的檔案**：只有 `~/.claude/settings.json` 與 `~/.codex/hooks.json`。Rota 只加入自己的條目，改之前會先備份，你自己的其他 hook 不會被動到。
-> - **不讀取**：prompt、程式碼、對話內容、工具輸出。唯一例外：附加圖片後，Rota 只從終端機輸入列辨識 `[Image #N]` 這個標記，不保存其他內容。
+> - **不讀取**：prompt、程式碼、對話內容、工具輸出。例外只有三種，都只在記憶體裡用，不保存也不上傳：終端機輸入框和附件會看輸入列附近的畫面（例如 `[Image #N]` 標記、Agent 是否回到輸入列）；輸入框的 `/` 清單會讀 skill 和指令檔開頭的名稱與說明；在輸入框按 ↑／↓ 時，會讀 Claude Code 和 Codex 自己的 prompt 紀錄。
 > - **不上傳**：所有資料都留在你的 Mac 上，沒有使用統計，也不會傳到任何伺服器。只有自動更新會向 GitHub 讀取版本資訊，可以在設定中關閉。
 > - **可以完全移除**：在 App 內按「解除安裝」，Rota 加入的條目會被移除，其他設定維持原樣。
 >
