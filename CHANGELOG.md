@@ -3,6 +3,76 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.3.0 — 保持清醒、語音輸入 ｜ Keep Awake, voice input
+
+**中文**
+
+### 新功能
+
+- **保持清醒**：Agent 還在工作時，Mac 不會因為閒置而睡著，Session 不會停在一半。
+  - **預設關閉**：照系統設定睡眠，跟以前一樣。要用時自己打開。
+  - **在哪裡設定**：工具列的咖啡杯。點杯子開或關，點旁邊的箭頭選模式。也可以在「顯示方式」選單，或「設定 → 進階與診斷 → 保持清醒」設定。
+  - **只在 Agent 工作時**（點杯子打開時的模式）：Rota 卡片裡有 Session 在跑，或在等你回答、等你允許時，才讓 Mac 保持清醒。全部做完，就照系統設定睡眠。
+    - 杯子變藍：待命中。
+    - 杯子冒熱氣：正在保持清醒。
+  - **一直**：不管有沒有 Agent 在工作，都保持清醒。可以選 1 小時、2 小時或直到關閉。
+    - 選 1 小時或 2 小時，時間到了或重開 Rota，都會回到關閉。
+    - 選 1 小時或 2 小時，杯子旁邊會顯示剩下的時間。
+  - **螢幕也保持亮著**（選用，預設不勾）：不勾的話，只有 Mac 不睡，螢幕照設定變暗和鎖定，Session 照樣在跑。
+  - 只算 Rota 卡片裡的 Session，其他終端機 App 裡的不算。
+  - **擋不住的情況**：
+    - 闔上蓋子（除非接著電源和外接螢幕）；
+    - 電量太低；
+    - 結束 Rota 之後，Mac 也恢復照系統設定睡眠。
+- **離開一下**：一鍵鎖定螢幕，Session 繼續在背景跑。快速鍵 ⌃⌥⌘L，咖啡杯選單裡也有。
+  - 保持清醒關著也能用：鎖定的這段時間會暫時保持清醒，回來解鎖後，恢復原本的設定。
+  - 沒辦法讓 Mac 保持清醒時，不會鎖定，並告訴你。
+- **語音輸入**：輸入框多了麥克風。說的話會轉成文字放進輸入框，你看過、改過再送出，不會自動送出。
+  - 最多錄 4 分鐘，最後 30 秒倒數。
+  - 要用你自己的 OpenAI API key。錄音只送到 OpenAI，key 存在 macOS 鑰匙圈。
+  - 預設關閉，在「設定 → 終端機」打開。
+
+### 修正
+
+- 用中文輸入法時，送出後輸入框一定會清空，不會再跑回剛才的內容和選字建議。
+- Claude Code 的建議按 Tab 帶進輸入框時，中文字之間不會再多出空格。
+- 拖到終端機的圖片和檔案，現在一律放進輸入框，不用先點輸入框；按住 ⌥ 拖入，照舊直接放進終端機。
+- 終端機裡 Claude Code 的輸入列已經有字時，輸入框送出的訊息會先排隊並說明原因，不會和那些字合在一起送出。
+
+**English**
+
+### New
+
+- **Keep Awake**: while agents are still working, your Mac won't fall asleep from idling, so sessions don't stop halfway.
+  - **Off by default**: your Mac sleeps on its usual schedule, as before. Turn it on when you want it.
+  - **Where to set it**: the cup in the toolbar. Click the cup to turn it on or off; click the arrow next to it to choose a mode. It is also in the View menu and in Settings → Advanced & Diagnostics → Keep Awake.
+  - **While Agents Work** (the mode the cup turns on): your Mac stays awake only while a session in a Rota card is running, or waiting for your answer or permission. When they all finish, it sleeps as usual.
+    - A blue cup: standing by.
+    - A steaming cup: keeping the Mac awake.
+  - **Always**: stays awake whether or not agents are working, for 1 hour, 2 hours or until you turn it off.
+    - With 1 or 2 hours, it turns off when the time is up, or when you reopen Rota.
+    - With 1 or 2 hours, the time left shows beside the cup.
+  - **Keep the Display On** (optional, off by default): without it, only the Mac stays awake; the display still dims and locks as usual, and sessions keep running.
+  - Only sessions in Rota cards count, not those in other terminal apps.
+  - **What it can't prevent**:
+    - closing the lid (unless the Mac is on power with an external display);
+    - a very low battery;
+    - after you quit Rota, your Mac goes back to its usual sleep settings.
+- **Step Away**: lock the screen in one step while sessions keep running in the background. Shortcut ⌃⌥⌘L, also in the cup's menu.
+  - It works even with Keep Awake off: the Mac stays awake while the screen is locked, and your setting comes back when you unlock.
+  - If Rota can't keep the Mac awake, it doesn't lock the screen and tells you.
+- **Voice input**: a microphone in the input box. What you say becomes text in the input box; you check and edit it before sending, and nothing is sent on its own.
+  - Up to 4 minutes, with a countdown in the last 30 seconds.
+  - Uses your own OpenAI API key. The recording goes only to OpenAI, and the key stays in the macOS keychain.
+  - Off by default; turn it on in Settings → Terminal.
+
+### Fixed
+
+- With an input method such as Chinese, the input box now always clears after sending, and the sent text and suggestions no longer come back.
+- Pressing Tab to bring in Claude Code's suggestion no longer puts spaces between Chinese characters.
+- Images and files dropped on a terminal now go into its input box, with no need to click the box first. Hold ⌥ while dropping to put them straight into the terminal, as before.
+- If Claude Code's input line in the terminal already has text, a message from the input box waits in the queue and says why, instead of being sent along with that text.
+
 ## 1.2.1 — 輸入框更好用 ｜ A friendlier input box
 
 **中文**

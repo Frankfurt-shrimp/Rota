@@ -2,7 +2,7 @@
 
 [← Back to the README](../README.en.md) ｜ [繁體中文](privacy.md)
 
-**In one line**: Rota records only when an AI starts and stops a turn. Everything stays on your Mac. It never reads content and never uploads anything.
+**In one line**: Rota records only when an AI starts and stops a turn. Everything stays on your Mac. It never reads content and never uploads anything — the one exception is voice input, if you turn it on: the recording goes to OpenAI to be transcribed.
 
 ## What Rota records
 
@@ -19,7 +19,7 @@
 - Your prompts, the AI's replies or conversations;
 - Code, file contents, or tool input and output;
 - Background task descriptions, commands or URLs;
-- Accounts, email addresses, API keys or any credentials.
+- Accounts, email addresses, API keys or any credentials (the OpenAI API key for voice input is kept only in the macOS keychain, never in Rota's data).
 
 Data from the hooks is filtered before anything reaches the disk, so none of the above is ever stored.
 
@@ -48,6 +48,7 @@ Rota has no server, no analytics and no crash reporting. Its only network-relate
 - **Claude usage** (only if you turn on Account usage): provided by Claude Code's own status line; Rota reads only the usage numbers;
 - **Codex usage**: read through the Codex CLI on your Mac; Rota itself does not connect to the network;
 - **Running an app on a phone without a cable** (only when you use it): connects over your local network to your own iPhone or Android phone;
+- **Voice input** (off by default, only when you click the microphone): the recording is kept for a moment in your Mac's temporary folder, then sent with your own OpenAI API key to `api.openai.com` only, to be transcribed (redirects are refused, so the key never goes anywhere else). Along with the recording Rota sends only a short list of names that helps recognition: Claude Code, Codex, Rota, the card title, the project name and up to 50 `/` command names — never terminal or conversation text. The text only goes into the input box, and reaches the agent only when you send it. The recording is deleted once it is transcribed; if transcription fails it is kept so you can try again, and deleted when you cancel, quit, or next open Rota. What OpenAI does with the data it receives is governed by OpenAI's API terms. The first time, macOS asks for microphone access;
 - **Automatic updates** (can be turned off in Settings → Advanced & Diagnostics → Updates): when Rota opens, it reads version information from GitHub; when there is a new version, it downloads the installer from GitHub and verifies its signature before installing. As with any download, GitHub sees your IP address and Rota's version; nothing else is sent.
 
 ## Settings files it changes
@@ -58,3 +59,5 @@ Rota has no server, no analytics and no crash reporting. Its only network-relate
 | `~/.codex/hooks.json` | Rota's hook entries |
 
 Each file is backed up before it changes. **Uninstall** removes only Rota's own entries.
+
+**Keep Awake** and **Step Away** change no system settings: Keep Awake only asks macOS not to idle-sleep while it is needed, and stops when you turn it off or quit Rota; Step Away uses macOS's own lock screen.

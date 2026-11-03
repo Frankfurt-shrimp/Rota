@@ -12,6 +12,9 @@ This page covers the parts of Rota that need some explaining. If you haven't fin
 - [Usage](#usage)
 - [Running apps](#running-apps)
 - [Wireless Android](#wireless-android)
+- [Keep Awake](#keep-awake)
+- [Step Away](#step-away)
+- [Voice input](#voice-input)
 - [Integrations need updating](#integrations-need-updating)
 
 ## Linking cards
@@ -262,6 +265,36 @@ A restart ends the wireless connection. Plug the phone in once and Rota switches
 - restart adb (Rota asks first).
 
 On Samsung phones, Auto Blocker can turn off USB and wireless debugging. If something doesn't work, turn it off on the phone first.
+
+## Keep Awake
+
+While agents are still working, your Mac won't fall asleep from idling, so sessions don't stop halfway. Off by default.
+
+- **Where**: the cup in the toolbar. Click the cup to turn it on or off; click the arrow next to it to choose a mode. It is also in the View menu and in Settings → Advanced & Diagnostics → Keep Awake.
+- **While Agents Work** (the mode the cup turns on): your Mac stays awake only while a session in a Rota card is running, or waiting for your answer or permission; when they all finish, it sleeps as usual. A blue cup is standing by; a steaming cup is keeping the Mac awake.
+- **Always**: stays awake whether or not agents are working, for 1 hour, 2 hours or until you turn it off. With 1 or 2 hours, the time left shows beside the cup, and it turns off when the time is up or when you reopen Rota.
+- **Keep the Display On** (off by default): without it, only the Mac stays awake; the display still dims and locks as usual, and sessions keep running.
+- Only sessions in Rota cards count, not those in other terminal apps.
+- **What it can't prevent**: closing the lid (unless the Mac is on power with an external display) and a very low battery. After you quit Rota, your Mac goes back to its usual sleep settings.
+
+## Step Away
+
+Press ⌃⌥⌘L, or choose **Step Away** in the cup's menu. The screen locks at once and sessions keep running in the background.
+
+- It works even with Keep Awake off: the Mac stays awake while the screen is locked, and your setting comes back when you unlock.
+- If Rota can't keep the Mac awake, it doesn't lock the screen and tells you why.
+
+## Voice input
+
+When you don't feel like typing, talk to the input box instead. It needs your own OpenAI API key.
+
+1. In Settings → Terminal, turn on voice input.
+2. Paste your OpenAI API key, click **Save**, then **Test** to check it works. The key is kept in the macOS keychain.
+3. In a card terminal's input box, click the microphone and talk; click **Done** when you finish (or **Cancel** to drop it). The first time, macOS asks for microphone access.
+
+- What you say becomes text in the input box; you check and edit it before sending, and nothing is sent on its own.
+- Up to 4 minutes, with a countdown in the last 30 seconds.
+- The recording goes only to OpenAI, to be transcribed, and is billed to your OpenAI account. For what is sent and kept, see [Privacy](privacy.en.md).
 
 ## Integrations need updating
 

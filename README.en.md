@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 <p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
-  <a href="../../releases/download/v1.2.1/Rota-1.2.1.dmg"><b>Download Rota 1.2.1 (.dmg)</b></a><br>
+  <a href="../../releases/download/v1.3.0/Rota-1.3.0.dmg"><b>Download Rota 1.3.0 (.dmg)</b></a><br>
   <sub><a href="../../releases">All versions and release notes</a></sub>
 </p>
 
@@ -81,10 +81,11 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
   <img src="assets/composer.en.png" width="820" alt="The input box under a Rota card terminal: two attachment chips, settings-mockup.png and spec-notes.md, above the message /compact keep the settings page decisions, with /compact in blue">
 </p>
 
-- Every card terminal has an input box below it. Edit your message to Claude Code or Codex as in any text field; input methods work as usual.
+- Every card terminal has an input box below it. In the terminal the cursor only moves with the arrow keys; in the input box, click where you want to change something. Input methods work as usual.
 - While the agent is working, messages wait in a queue and go out in order when the turn ends. A queued message can be sent now, edited or cancelled.
-- Type `/` to list commands and skills (skills mid-sentence too), and press ↑/↓ to bring back earlier prompts, as in the CLI.
+- Type `/` to list commands and skills (skills mid-sentence too). Press ↑/↓ to bring back earlier messages and Tab to bring in Claude Code's suggestion — the same keys as in the terminal.
 - Drag or paste (⌘V) files and images into the box; they go out with that message. Click an attachment to preview it in Quick Look.
+- Don't feel like typing? Click the microphone and talk (needs your own OpenAI API key; see [voice input](#dont-feel-like-typing-just-talk-voice-input) below).
 - To hide it, turn off **Show terminal input box** in Settings → Terminal.
 
 ### Drop images into the terminal and preview them before sending
@@ -116,6 +117,31 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 - The usage panel in the toolbar shows the remaining 5-hour and weekly usage for Claude Code and Codex, so you can decide who takes the next turn.
 - Claude Code usage has to be turned on separately; see the [guide](docs/guide.en.md#usage).
 
+### Your Mac stays awake while agents work (Keep Awake)
+
+<p align="center">
+  <img src="assets/keepawake.en.png" width="560" alt="The toolbar: beside the Run and Stop buttons, the cup is steaming with 1:00 of Keep Awake left; then the arrow menu and the usage rail">
+</p>
+
+- Click the cup in the toolbar and your Mac won't fall asleep from idling while agents work, so sessions don't stop halfway. When they all finish, it sleeps as usual.
+- Click the arrow next to the cup to switch to **Always** (1 hour, 2 hours or until you turn it off), or to keep the display on as well.
+- Off by default. It can't prevent sleep when you close the lid (unless the Mac is on power with an external display) or when the battery is very low; after you quit Rota, your Mac sleeps as usual.
+
+### Lock the screen, agents keep going (Step Away)
+
+- When you leave your desk, press ⌃⌥⌘L (**Step Away** is also in the cup's menu). The screen locks at once and sessions keep running in the background.
+- It works even with Keep Awake off: the Mac stays awake while the screen is locked, and your setting comes back when you unlock.
+
+### Don't feel like typing? Just talk (voice input)
+
+<p align="center">
+  <img src="assets/voice.en.png" width="820" alt="Top: the input box recording, showing Recording 0:12 with Cancel and Done; bottom: the transcript “Open a PR and list what changed this time” waits in the box for you to send">
+</p>
+
+- Click the microphone in the input box and talk, then click **Done**. What you say becomes text in the input box; check and edit it before sending — nothing is sent on its own. Up to 4 minutes.
+- Needs your own OpenAI API key (kept in the macOS keychain). The recording goes only to OpenAI, to be transcribed.
+- Off by default; turn it on in Settings → Terminal. See the [guide](docs/guide.en.md#voice-input).
+
 ## Getting started
 
 1. **Add a project**: press **+** in the sidebar and choose the project folder.
@@ -146,7 +172,7 @@ Everything after that, such as running several terminals, linking Sessions you s
 
 > - **Files it changes**: only `~/.claude/settings.json` and `~/.codex/hooks.json`. Rota adds its own entries only, backs up each file first, and never touches your other hooks.
 > - **Never read**: prompts, code, conversations or tool output. There are three exceptions, all used in memory only, never kept or uploaded: the terminal input box and attachments look at the screen around the input line (for example the `[Image #N]` marker, or whether the agent is back at its input line); the input box's `/` list reads the names and descriptions at the top of skill and command files; and pressing ↑/↓ in the input box reads Claude Code's and Codex's own prompt history.
-> - **Never uploaded**: everything stays on your Mac. No analytics, no server of ours. Only automatic updates read version information from GitHub, and you can turn them off.
+> - **Never uploaded**: everything stays on your Mac. No analytics, and Rota has no server of its own. Only two things use the network: automatic updates read version information from GitHub (you can turn them off), and voice input, when you turn it on, sends the recording to OpenAI with your own API key to be transcribed.
 > - **Fully removable**: press **Uninstall** in the app and Rota's entries are removed; everything else stays as it was.
 >
 > Details: [Privacy](docs/privacy.en.md)
@@ -159,6 +185,7 @@ Everything after that, such as running several terminals, linking Sessions you s
 | AI CLI | At least one, installed and signed in: [Claude Code](https://docs.anthropic.com/claude-code) or [Codex CLI](https://github.com/openai/codex) |
 | Optional: run iOS apps | Xcode |
 | Optional: run Android apps | Android Studio (or the Android SDK and a JDK) |
+| Optional: voice input | Your own OpenAI API key |
 
 ## Updating and removing
 

@@ -22,7 +22,7 @@
 https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 
 <p align="center">
-  <a href="../../releases/download/v1.2.1/Rota-1.2.1.dmg"><b>下載 Rota 1.2.1（.dmg）</b></a><br>
+  <a href="../../releases/download/v1.3.0/Rota-1.3.0.dmg"><b>下載 Rota 1.3.0（.dmg）</b></a><br>
   <sub><a href="../../releases">所有版本與更新紀錄</a></sub>
 </p>
 
@@ -77,10 +77,11 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
   <img src="assets/composer.png" width="820" alt="Rota 卡片終端機下方的輸入框：上面有兩個附件小卡「設定頁草圖.png」和「規格筆記.md」，下面是訊息「/compact 保留設定頁的決定」，其中 /compact 是藍色">
 </p>
 
-- 每個卡片終端機下方有一個輸入框，可以像一般文字框一樣編輯要給 Claude Code 或 Codex 的訊息，注音等輸入法照常可用。
+- 每個卡片終端機下方有一個輸入框。終端機裡只能用方向鍵移動游標，在輸入框裡點一下就能改，注音等輸入法照常可用。
 - Agent 正在執行時，訊息會排隊，這一輪結束後依序送出；排隊的訊息可以立即送出、編輯或取消。
-- 打 `/` 會列出指令和 skill（句子中間也可以叫出 skill），按 ↑／↓ 可以叫回之前送過的 prompt，和 CLI 一樣。
+- 打 `/` 會列出指令和 skill（句子中間也可以叫出 skill）。按 ↑／↓ 叫回之前送過的訊息、按 Tab 帶入 Claude Code 的建議，用法跟終端機一樣。
 - 檔案和圖片可以拖進輸入框或用 ⌘V 貼上，跟著那則訊息一起送出；點一下附件就能用「快速查看」預覽。
+- 不想打字時，可以按麥克風用說的（需自備 OpenAI API key，見下方[語音輸入](#不想打字用說的語音輸入)）。
 - 不想用時，可以在「設定 → 終端機」關掉「顯示終端機輸入框」。
 
 ### 把圖片拖進終端機，送出前先預覽
@@ -112,6 +113,31 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 - 工具列可以打開用量面板，查看 Claude Code 和 Codex 的 5 小時與每週剩餘用量，決定下一棒要交給誰。
 - Claude Code 的用量需要在設定中另外開啟，做法見[使用指南](docs/guide.md#用量)。
 
+### Agent 在工作，Mac 就不睡（保持清醒）
+
+<p align="center">
+  <img src="assets/keepawake.png" width="560" alt="工具列：執行與停止按鈕旁，咖啡杯冒著熱氣，旁邊顯示保持清醒還剩 1:00，右邊是箭頭選單和用量">
+</p>
+
+- 點工具列的咖啡杯，Agent 在工作時 Mac 就不會因為閒置睡著，Session 不會停在一半；全部做完，Mac 照系統設定睡眠。
+- 點杯子旁的箭頭，可以改成「一直」（1 小時、2 小時或直到關閉），也可以讓螢幕一起保持亮著。
+- 預設關閉。闔上蓋子（沒接電源和外接螢幕時）、電量太低時擋不住；結束 Rota 後，Mac 照系統設定睡眠。
+
+### 鎖上螢幕，Agent 照跑（離開一下）
+
+- 要離開座位時按 ⌃⌥⌘L（杯子的選單裡也有「離開一下」），螢幕馬上鎖定，Session 繼續在背景跑。
+- 保持清醒關著也能用：鎖定的這段時間會暫時保持清醒，回來解鎖後恢復原本的設定。
+
+### 不想打字？用說的（語音輸入）
+
+<p align="center">
+  <img src="assets/voice.png" width="820" alt="上：輸入框正在錄音，顯示「錄音中 0:12」和「取消」「完成」按鈕；下：轉好的文字「幫我開一個 PR，寫上這次改了什麼」放在輸入框裡等你送出">
+</p>
+
+- 按輸入框的麥克風開始說，按「完成」後轉成文字放進輸入框，看過、改過再送出，不會自動送出。最多錄 4 分鐘。
+- 需自備 OpenAI API key（存在 macOS 鑰匙圈）。錄音只送到 OpenAI 轉成文字。
+- 預設關閉，在「設定 → 終端機」打開，做法見[使用指南](docs/guide.md#語音輸入)。
+
 ## 開始使用
 
 1. **新增專案**：按側邊欄的「＋」，選擇專案資料夾。
@@ -142,7 +168,7 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 
 > - **會改動的檔案**：只有 `~/.claude/settings.json` 與 `~/.codex/hooks.json`。Rota 只加入自己的條目，改之前會先備份，你自己的其他 hook 不會被動到。
 > - **不讀取**：prompt、程式碼、對話內容、工具輸出。例外只有三種，都只在記憶體裡用，不保存也不上傳：終端機輸入框和附件會看輸入列附近的畫面（例如 `[Image #N]` 標記、Agent 是否回到輸入列）；輸入框的 `/` 清單會讀 skill 和指令檔開頭的名稱與說明；在輸入框按 ↑／↓ 時，會讀 Claude Code 和 Codex 自己的 prompt 紀錄。
-> - **不上傳**：所有資料都留在你的 Mac 上，沒有使用統計，也不會傳到任何伺服器。只有自動更新會向 GitHub 讀取版本資訊，可以在設定中關閉。
+> - **不上傳**：所有資料都留在你的 Mac 上，沒有使用統計，Rota 也沒有自己的伺服器。會連網的只有兩種：自動更新向 GitHub 讀取版本資訊，可以在設定中關閉；你自己打開語音輸入時，錄音用你的 OpenAI API key 送到 OpenAI 轉成文字。
 > - **可以完全移除**：在 App 內按「解除安裝」，Rota 加入的條目會被移除，其他設定維持原樣。
 >
 > 完整說明：[隱私](docs/privacy.md)
@@ -155,6 +181,7 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 | AI CLI | 至少一個：[Claude Code](https://docs.anthropic.com/claude-code) 或 [Codex CLI](https://github.com/openai/codex)，已安裝並登入 |
 | 選用：執行 iOS App | Xcode |
 | 選用：執行 Android App | Android Studio（或 Android SDK 與 JDK） |
+| 選用：語音輸入 | 你自己的 OpenAI API key |
 
 ## 更新與移除
 
