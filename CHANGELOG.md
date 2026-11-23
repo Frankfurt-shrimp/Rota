@@ -3,6 +3,30 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.3.1 — 自動搬卡更順暢、輸入框和終端機修正 ｜ Smoother card moves, input box and terminal fixes
+
+**中文**
+
+### 改進
+
+- **自動搬卡效能優化**：卡片自動搬到其他河道時反應更快、動畫更順暢；滑鼠移到卡片上和拖曳卡片也更流暢。
+
+### 修正
+
+- 用中文輸入法送出後，輸入框偶爾還留著剛才的內容：已修正。
+- 調整視窗大小或拖動分隔線時，終端機重複顯示前幾行：已修正，調整大小時的效能也一併優化。
+
+**English**
+
+### Improved
+
+- **Faster automatic card moves**: cards move to another lane sooner and animate more smoothly; hovering over and dragging cards is smoother too.
+
+### Fixed
+
+- After sending with an input method such as Chinese, the sent text sometimes stayed in the input box: fixed.
+- Resizing the window or dragging a divider made the terminal repeat its first lines: fixed, and resizing is smoother.
+
 ## 1.3.0 — 保持清醒、語音輸入 ｜ Keep Awake, voice input
 
 **中文**
