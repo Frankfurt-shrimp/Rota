@@ -3,6 +3,28 @@
 格式：每個版本先寫中文，再寫英文。版本號遵循 `主版本.次版本.修正版`。
 Each release lists Chinese first, then English. Versions follow `major.minor.patch`.
 
+## 1.4.0 — 「開回」功能、選單列的完成光暈 ｜ Reopen, Completion Glow in the menu
+
+**中文**
+
+### 新功能
+
+- **開回**：新功能。結束 Rota 時，卡片終端機裡正在跑的 Claude Code、Codex 會被記下來；下次打開 Rota，可以把這些 Agent session 重新開啟，接回同一個對話。打開時 Rota 會先問你要不要開回，按「開回」後，每個 session 回到原本的卡片、原本的位置，並停在你上次看的那個分頁。
+  - 只記已連結卡片的 Agent，普通終端機不會開回。
+  - 開不回的（例如卡片已封存、資料夾不見了）會跳過，並告訴你原因。
+  - 結束時正在進行的那一輪不會自動重送，接回後再送一次即可。
+- **選單列的完成光暈**：在「顯示方式 → 完成光暈」就能開關光暈、選擇哪些 Session 完成時要亮，也能預覽，不用再進設定。
+
+**English**
+
+### New
+
+- **Reopen**: a new feature. When you quit Rota, the Claude Code and Codex sessions running in card terminals are remembered, and the next time you open Rota you can reopen them and pick up the same conversations. Rota asks first; choose Reopen and each session returns to its card and place, showing the tab you last looked at.
+  - Only agents linked to a card are remembered; plain terminals are not reopened.
+  - Anything that can't be reopened (for example an archived card or a missing folder) is skipped, and Rota tells you why.
+  - A turn that was still running when you quit is not sent again; send it once more after the session resumes.
+- **Completion Glow in the menu**: View → Completion Glow turns the glow on or off, picks which sessions light it up and previews it, without opening Settings.
+
 ## 1.3.1 — 自動搬卡更順暢、輸入框和終端機修正 ｜ Smoother card moves, input box and terminal fixes
 
 **中文**

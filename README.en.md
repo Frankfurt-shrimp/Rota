@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 <p align="center"><sub>The interface in this video is in Traditional Chinese.</sub></p>
 
 <p align="center">
-  <a href="../../releases/download/v1.3.1/Rota-1.3.1.dmg"><b>Download Rota 1.3.1 (.dmg)</b></a><br>
+  <a href="../../releases/download/v1.4.0/Rota-1.4.0.dmg"><b>Download Rota 1.4.0 (.dmg)</b></a><br>
   <sub><a href="../../releases">All versions and release notes</a></sub>
 </p>
 
@@ -141,6 +141,12 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 - Click the microphone in the input box and talk, then click **Done**. What you say becomes text in the input box; check and edit it before sending — nothing is sent on its own. Up to 4 minutes.
 - Needs your own OpenAI API key (kept in the macOS keychain). The recording goes only to OpenAI, to be transcribed.
 - Off by default; turn it on in Settings → Terminal. See the [guide](docs/guide.en.md#voice-input).
+
+### Quit Rota, pick up where you left off (Reopen)
+
+- When you quit Rota, the Claude Code and Codex sessions running in card terminals are remembered. Next time you open Rota, it asks whether to reopen your last agent sessions.
+- Choose **Reopen** and each session returns to its card and place, resumes the same conversation, and shows the tab you last looked at.
+- Only agents linked to a card are remembered. Anything that can't be reopened (for example an archived card) is skipped, and Rota tells you why; a turn still running when you quit can be sent again after the session resumes.
 
 ## Getting started
 

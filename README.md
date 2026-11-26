@@ -22,7 +22,7 @@
 https://github.com/user-attachments/assets/f956e675-ba0a-4541-baae-687fc1f472bd
 
 <p align="center">
-  <a href="../../releases/download/v1.3.1/Rota-1.3.1.dmg"><b>下載 Rota 1.3.1（.dmg）</b></a><br>
+  <a href="../../releases/download/v1.4.0/Rota-1.4.0.dmg"><b>下載 Rota 1.4.0（.dmg）</b></a><br>
   <sub><a href="../../releases">所有版本與更新紀錄</a></sub>
 </p>
 
@@ -137,6 +137,12 @@ https://github.com/user-attachments/assets/d0ed8a3a-80de-4278-ac65-53a6f51336de
 - 按輸入框的麥克風開始說，按「完成」後轉成文字放進輸入框，看過、改過再送出，不會自動送出。最多錄 4 分鐘。
 - 需自備 OpenAI API key（存在 macOS 鑰匙圈）。錄音只送到 OpenAI 轉成文字。
 - 預設關閉，在「設定 → 終端機」打開，做法見[使用指南](docs/guide.md#語音輸入)。
+
+### 結束 Rota 也不怕，下次直接開回（開回）
+
+- 結束 Rota 時，卡片終端機裡正在跑的 Claude Code、Codex 會被記下來。下次打開 Rota，會問你要不要開回上次的 Agent session。
+- 按「開回」，每個 session 會回到原本的卡片、原本的位置，接回同一個對話，並停在你上次看的那個分頁。
+- 只記已連結卡片的 Agent。開不回的（例如卡片已封存）會跳過並說明原因；結束時還在進行的那一輪，接回後再送一次即可。
 
 ## 開始使用
 

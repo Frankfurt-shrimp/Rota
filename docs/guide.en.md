@@ -168,6 +168,8 @@ In the **Completion Glow** section of **Settings → Appearance & Layout** you c
 - **Show the glow**: **When any Session finishes**, or **Only for Sessions linked to a card**. With the second, Sessions without a card don't glow.
 - **Preview**: shows the glow once.
 
+You can also turn the glow on or off, choose which sessions light it up and preview it from **View → Completion Glow** in the menu bar.
+
 The glow never takes focus and can't be clicked. With Reduce Motion or Low Power Mode on, it only fades in and out; with Reduce Transparency on, it becomes a solid band with no blur.
 
 ## Usage
